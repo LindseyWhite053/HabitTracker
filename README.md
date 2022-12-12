@@ -8,7 +8,7 @@ A web application created to help a use create and keep track of habits. It incl
 * Feras Baraka - fbaraka
 * Chris Boos - cboos
 
-![localhost_4200_ (1)](https://git.rockfin.com/storage/user/6614/files/499d16de-a44d-4444-9a13-ff221d746bfd)
-![localhost_4200_habits (1)](https://git.rockfin.com/storage/user/6614/files/81a7c984-26e8-4856-a2c8-b0e0d58afc87)
-![localhost_4200_add](https://git.rockfin.com/storage/user/6614/files/93d43cbb-544c-4a68-9111-4c939f455462)
-![localhost_4200_tracking (1)](https://git.rockfin.com/storage/user/6614/files/d617ed8b-1dec-4b1d-8f29-5796be152867)
+![localhost_4200_ (1)](https://user-images.githubusercontent.com/99527756/207089600-0cacfcfc-002f-4e54-8e94-9925c524cf96.png)
+![localhost_4200_habits (1)](https://user-images.githubusercontent.com/99527756/207089648-ce79fb10-cacd-44f1-ae35-5d90667a69a3.png)
+![localhost_4200_add](https://user-images.githubusercontent.com/99527756/207089685-40e7ffda-bfd2-491f-86ac-088f94c03075.png)
+![localhost_4200_tracking (1)](https://user-images.githubusercontent.com/99527756/207089712-11372e00-617d-4a4a-979c-63ae8a6bbc3e.png)
