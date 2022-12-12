@@ -1,0 +1,13 @@
+<div class="container d-flex justify-content-center">
+    
+    <div class="row justify-content-center align-items-center text-center">
+
+        <h1 class="col-12">Welcome!</h1>
+        <h2 class="col-12">Who are you?</h2>
+        <p class=""*ngIf="loginError == true">Enter a valid User Name</p>
+        <div class="col-12">
+            <input class="bar col-sm-12 " type="text" [(ngModel)]="enteredUserName"/>
+            <button class="btn btn-sm col-xs-12 xl-col-2" (click)="logIn()">Log In</button>
+        </div>
+    </div>
+</div>

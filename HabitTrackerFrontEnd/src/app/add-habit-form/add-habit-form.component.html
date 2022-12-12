@@ -1,0 +1,99 @@
+<!--Template Practice Below -->
+<!--https://codepen.io/chaiyachet/pen/OJyEPWr-->
+    <div class="container text-center ">
+        <!-- Start Header form -->
+        <div class="row d-flex justify-content-center">
+            <h2 class="col-12">Add Habit</h2>
+            <p>
+              Please complete the form below
+            </p>
+        </div>
+      <!-- End Header form -->
+    
+      <!-- Start Card -->
+      <div class="card container">
+        <!-- Start Card Body -->
+        <div class="card-body row d-flex justify-content-center">
+          <!-- Start Form -->
+          <form id="bookingForm" action="#" method="" class="col-12 needs-validation" novalidate autocomplete="off">
+            <!-- Insert Title -->
+            <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control" id="title" name="title" #name="ngModel" placeholder="Provide a title for your new habit" [(ngModel)]="newHabit.title" required />
+              <span style="color:red; font-weight:bold" *ngIf="name.errors?.['required']">
+                Title is required.
+              </span>
+            </div>
+            <!--Input Form Validation-->
+            <!--Input Form Validation-->
+
+
+            <!-- End Insert Title -->
+    
+              <!-- Start Input Start Time -->
+          
+                  <label>Select a Category</label>
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <select  class="form-control mr-1" id="category" name="category" #category="ngModel" [(ngModel)]="newHabit.category_id"  required>
+                        <option value="" disabled>Choose your category</option>
+                      <option *ngFor="let cat of TheCategory" [value]="cat.id">{{cat.type}}</option>
+
+                      </select><br>
+
+                  </div>
+                  <span style="color:red; font-weight:bold" *ngIf="newHabit.category_id == 0" >
+                    Category is required.
+                  </span>
+                  <!-- End Input Start Time -->
+
+
+            <!-- Start Input Amount -->
+            <div class="form-group">
+              <label for="inputEmail">Amount</label>
+              <input type="text" class="form-control" id="amount" name="amount" #amount="ngModel" placeholder="Enter amount" [(ngModel)]="newHabit.amount" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+              <span style="color:red; font-weight:bold" *ngIf="amount.errors?.['required']">
+                Amount is required.
+              </span>
+            </div>
+            <!-- End Input Amount -->
+              <!-- Start Input Date , Start Time and End Time -->
+              <div class="form-row d-flex justify-content-around">
+              <!-- Start Input Date -->
+                  <div class="form-group col-md-4">
+                      <label for="inputDate">Start Date</label>
+                      <input type="date"  class="form-control" id="start" name="amount" #start="ngModel" [(ngModel)]="newHabit.startDate" name="date" required />            
+                    </div>
+
+
+                  <div class="form-group col-md-4">
+                      <label for="inputDate">End Date</label>
+                      <input type="date" class="form-control" id="end" name="end" #end="ngModel" [(ngModel)]="newHabit.endDate" name="date" required />
+                  </div>
+                </div>
+              <!-- End Input Date -->
+              
+            <!-- Start Input Date , Start Time and End Time -->
+            <div class="form-row">
+            </div>
+            <!-- End Input Date , Start Time and End Time -->
+
+            <!-- Start Input Remark -->
+            <div class="form-group">
+              <label for="textAreaRemark">Description</label>
+              <textarea class="form-control" id="description" name="description" #description="ngModel" placeholder="Describe your habit" [(ngModel)]="newHabit.description" required></textarea>
+              <span style="color:red; font-weight:bold" *ngIf="description.errors?.['required']">
+                Description is required.
+              </span>
+            </div>
+            <!-- End Input Remark -->
+    
+            <!-- Start Submit Button -->
+            <button class="btn btn-primary  col-lg-2" [disabled]="name.errors?.['required'] ||  amount.errors?.['required'] || start.errors?.['required'] || end.errors?.['required'] || description.errors?.['required'] || category.errors?.['required']" (click)="saveHabit()" >Save</button> <button class="btn btn-primary col-lg-2" (click)="clear()">Clear</button><button class="btn btn-primary col-lg-2" routerLink="/habits">Cancel</button>
+            <!-- End Submit Button -->
+          </form>
+          <!-- End Form -->
+        </div>
+        <!-- End Card Body -->
+      </div>
+      <!-- End Card -->
+

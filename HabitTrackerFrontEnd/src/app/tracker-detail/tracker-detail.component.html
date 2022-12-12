@@ -1,0 +1,68 @@
+
+<div class="card ">
+
+    <div class="card-body">
+        <div class="text-center">
+            <h4>
+                {{ trackedHabit.title.toUpperCase() }}
+            </h4>
+
+        </div>
+
+        <!-- Calculate Todays Date Then Make 6 days + Todays Day -->
+
+        <div class="full-card" >
+
+            <div class="Track-Time">
+
+                <div class="TrackBar-Border ">
+
+                    <div class="prog-report">
+
+                        <span class="Track-Bar-Text"> {{ getTimeLapse(trackedHabit) }}% Complete. </span>
+
+                        <span class="Track-Bar-date"> Ending in {{ getDaysLeft(trackedHabit)}} days. </span>
+
+                    </div>
+
+
+                    <div class="TrackBar-Progress"
+                        [ngStyle]="{'width.%': getTimeLapse(trackedHabit) }">
+
+                        <!--blank-->
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="Track-Complete">
+
+                <div class="TrackBar-Border">
+
+                    <div class="prog-report">
+                        {{getSuccessDays(currList)}} out of {{getDaysSoFar(trackedHabit)}} days recorded wins!
+                    </div>
+
+
+                    <div class="TrackBar-Progress"
+                        [ngStyle]="{'width.%': getSuccessRate(trackedHabit, currList) }">
+
+                    </div>
+
+                    <!-- {{getSuccessRate(trackedHabit, currList)}}% Winrate. -->
+
+                    <!-- </div> -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

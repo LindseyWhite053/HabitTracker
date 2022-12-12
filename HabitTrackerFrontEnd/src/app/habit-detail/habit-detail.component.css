@@ -1,0 +1,26 @@
+.container {
+    background-color:  var(--color-3);
+    padding-top: 1%;
+    border: 5px solid;
+    margin-left: 1%;
+    
+}
+
+#check-box {
+  padding: 1%;
+}
+
+
+@media only screen and (max-width: 1200px){
+  #check-box p{
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 425px){
+	
+  #calendar-bar{
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+button{
+    width: 200px;
+}
+
+
+ /*
+    !important overrides the bootstrap styling
+ */
+.btn-primary {
+    background-color:  var(--color-5)!important;
+    border-color:  var(--color-1) !important;
+}
+
+.btn-primary:hover {
+    background-color:  var(--color-2)!important;
+    border-color:  var(--color-2) !important;
+}
+
+.btn-primary:active {
+    background-color:  var(--color-2) !important;
+    border-color:  var(--color-2) !important; 
+    
+}
+
+.btn-primary:visited {
+    background-color:  var(--color-2)!important;
+    border-color:  var(--color-2) !important;
+}
+
+
+.alert {
+    color: red;
+    font-weight: 700;
+    
+}
